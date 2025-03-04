@@ -1,14 +1,14 @@
+import './App.css';
+import Game from './Game';
 
-import './App.css'
-import Game from './Game'
-
-function App() {
+const App: React.FC = () => {
+ 
 
   return (
-   <>
-   <Game/>
-   </>
-  )
-}
+    <div className="App">
+   <Game />
+    </div>
+  );
+};
 
-export default App
+export default App;
