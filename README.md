@@ -1,54 +1,22 @@
-# React + TypeScript + Vite
+#  React Phaser Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple Phaser 3 game integrated into a React app. The goal was to follow the provided steps to build a game with a start button, make it responsive, and configure UI elements dynamically.
 
-Currently, two official plugins are available:
+##  Features Implemented
+- Created a **React app** with TypeScript.
+- Added a **start button** that appears before and after the game ends.
+- Styled the button using a **configuration file (`button-config.ts`)**.
+- Adjusted the button’s position so it appears over the game.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Known Limitations
+- **Phaser game logic** is not fully implemented.
+- **Game responsiveness** needs more improvements.
+- **Start button functionality** is working, but further refinements are needed.
 
-## Expanding the ESLint configuration
+##  What I Learned
+- **Integrating Phaser 3** with a React application.
+- **Dynamically configuring UI elements** using TypeScript.
+- **Managing button visibility** based on game state.
+- Improved my **understanding of game development concepts**.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
